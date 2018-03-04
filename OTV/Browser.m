@@ -62,6 +62,15 @@ withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))comp
         
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
+        if (item.name) {
+            OTVItem *backItem = [[OTVItem alloc] init];
+            backItem.name = @"..";
+            backItem.isDirectory = YES;
+            backItem.url = [self.currentURL URLByAppendingPathComponent:@".."];
+            
+            [items addObject:backItem];
+        }
+        
         NSData *htmlData = (NSData *)responseObject;
         
         TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:htmlData];
@@ -70,8 +79,8 @@ withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))comp
         for (TFHppleElement *e in elements) {
             OTVItem *newItem = [[OTVItem alloc] init];
             
-            newItem.name = e.attributes[@"href"];
-            newItem.url = [item.url URLByAppendingPathComponent:e.attributes[@"href"]];
+            newItem.name = [e.attributes[@"href"] stringByRemovingPercentEncoding];
+            newItem.url = [item.url URLByAppendingPathComponent:newItem.name];
             newItem.isDirectory = [newItem.name hasSuffix:@"/"];
             
             [items addObject:newItem];

@@ -17,6 +17,7 @@
 		4D446BDA204C229300C858E3 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDD204C229300C858E3 /* SVProgressHUD.framework */; };
 		4D446BE0204C287700C858E3 /* Browser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BDF204C287700C858E3 /* Browser.m */; };
 		4D446BE3204C345800C858E3 /* OTVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BE2204C345800C858E3 /* OTVItem.m */; };
+		4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BE5204C35AD00C858E3 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		4D446BDF204C287700C858E3 /* Browser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Browser.m; sourceTree = "<group>"; };
 		4D446BE1204C345800C858E3 /* OTVItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTVItem.h; sourceTree = "<group>"; };
 		4D446BE2204C345800C858E3 /* OTVItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTVItem.m; sourceTree = "<group>"; };
+		4D446BE4204C35AD00C858E3 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		4D446BE5204C35AD00C858E3 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
 		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +97,8 @@
 				4D446BDF204C287700C858E3 /* Browser.m */,
 				4D446BE1204C345800C858E3 /* OTVItem.h */,
 				4D446BE2204C345800C858E3 /* OTVItem.m */,
+				4D446BE4204C35AD00C858E3 /* TableViewController.h */,
+				4D446BE5204C35AD00C858E3 /* TableViewController.m */,
 			);
 			path = OTV;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				4D446BE0204C287700C858E3 /* Browser.m in Sources */,
 				4D446BE3204C345800C858E3 /* OTVItem.m in Sources */,
 				4D446BD2204C1CB600C858E3 /* main.m in Sources */,
+				4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */,
 				4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
