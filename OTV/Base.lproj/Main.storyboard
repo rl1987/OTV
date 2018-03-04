@@ -69,9 +69,12 @@
                                 <gestureRecognizers/>
                             </view>
                         </subviews>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="oq8-eg-rrI"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Ozk-qg-oYb" appends="YES" id="dxF-6Y-bWG"/>
+                            <outletCollection property="gestureRecognizers" destination="LxH-IS-wlT" appends="YES" id="bDZ-Y9-ofJ"/>
+                            <outletCollection property="gestureRecognizers" destination="O9Z-Su-C03" appends="YES" id="0ZE-Wy-C6t"/>
                         </connections>
                     </view>
                     <connections>
@@ -85,6 +88,16 @@
                         <action selector="pauseTapped:" destination="mgl-9W-iDq" id="9TR-aT-REn"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="LxH-IS-wlT">
+                    <connections>
+                        <action selector="swipeRight:" destination="mgl-9W-iDq" id="vfr-oL-f03"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="O9Z-Su-C03">
+                    <connections>
+                        <action selector="swipeLeft:" destination="mgl-9W-iDq" id="hn0-Ix-e1R"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1602" y="-108"/>
         </scene>

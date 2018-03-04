@@ -56,4 +56,12 @@
     }
 }
 
+- (IBAction)swipeRight:(id)sender {
+    [self.player shortJumpForward];
+}
+
+- (IBAction)swipeLeft:(id)sender {
+    [self.player shortJumpBackward];
+}
+
 @end
