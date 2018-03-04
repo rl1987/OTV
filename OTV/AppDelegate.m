@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <hpple/TFHpple.h>
+#import "Browser.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSData *htmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://omarroms.homeip.net/"]];
     
-    TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:htmlData];
-    NSArray *elements = [hpple searchWithXPathQuery:@"//div[@class='fileInfo']//a"];
+    Browser *browser = [[Browser alloc] init];
     
-    NSLog(@"%@", elements);
+    [browser browseToItem:nil withCompletionHandler:^(NSArray<OTVItem *> *items, NSError *error) {
+        NSLog(@"%@", items);
+        
+        [browser browseToItem:[items firstObject]
+        withCompletionHandler:^(NSArray<OTVItem *> *items, NSError *error) {
+            NSLog(@"%@", items);
+        }];
+    }];
     
     return YES;
 }

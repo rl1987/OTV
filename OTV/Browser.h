@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "OTVItem.h"
+
 @interface Browser : NSObject
+
+- (void)browseToItem:(OTVItem *)item
+withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))completionHandler;
 
 @end

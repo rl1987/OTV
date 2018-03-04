@@ -16,6 +16,8 @@
 		4D446BD8204C229300C858E3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDB204C229300C858E3 /* AFNetworking.framework */; };
 		4D446BD9204C229300C858E3 /* hpple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDC204C229300C858E3 /* hpple.framework */; };
 		4D446BDA204C229300C858E3 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDD204C229300C858E3 /* SVProgressHUD.framework */; };
+		4D446BE0204C287700C858E3 /* Browser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BDF204C287700C858E3 /* Browser.m */; };
+		4D446BE3204C345800C858E3 /* OTVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BE2204C345800C858E3 /* OTVItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		4D446BDB204C229300C858E3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D446BDC204C229300C858E3 /* hpple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = hpple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D446BDD204C229300C858E3 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D446BDE204C287700C858E3 /* Browser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Browser.h; sourceTree = "<group>"; };
+		4D446BDF204C287700C858E3 /* Browser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Browser.m; sourceTree = "<group>"; };
+		4D446BE1204C345800C858E3 /* OTVItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTVItem.h; sourceTree = "<group>"; };
+		4D446BE2204C345800C858E3 /* OTVItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTVItem.m; sourceTree = "<group>"; };
 		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
 		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +95,10 @@
 				4D446BCE204C1CB600C858E3 /* Assets.xcassets */,
 				4D446BD0204C1CB600C858E3 /* Info.plist */,
 				4D446BD1204C1CB600C858E3 /* main.m */,
+				4D446BDE204C287700C858E3 /* Browser.h */,
+				4D446BDF204C287700C858E3 /* Browser.m */,
+				4D446BE1204C345800C858E3 /* OTVItem.h */,
+				4D446BE2204C345800C858E3 /* OTVItem.m */,
 			);
 			path = OTV;
 			sourceTree = "<group>";
@@ -235,6 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D446BE0204C287700C858E3 /* Browser.m in Sources */,
+				4D446BE3204C345800C858E3 /* OTVItem.m in Sources */,
 				4D446BCA204C1CB600C858E3 /* ViewController.m in Sources */,
 				4D446BD2204C1CB600C858E3 /* main.m in Sources */,
 				4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */,

@@ -8,6 +8,79 @@
 
 #import "Browser.h"
 
+#import <AFNetworking/AFNetworking.h>
+#import <hpple/TFHpple.h>
+
+@interface Browser()
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
+
+@property (nonatomic, strong) NSURL *currentURL;
+
+@end
+
 @implementation Browser
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.manager = [AFHTTPSessionManager manager];
+        self.manager.responseSerializer = [AFCompoundResponseSerializer serializer];
+        self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    }
+ 
+    return self;
+}
+
+- (void)browseToItem:(OTVItem *)item
+withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))completionHandler {
+    /*
+     NSData *htmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://omarroms.homeip.net/"]];
+     
+     TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:htmlData];
+     NSArray *elements = [hpple searchWithXPathQuery:@"//div[@class='fileInfo']//a"];
+     
+     NSLog(@"%@", elements);
+     */
+    
+    if (!item) {
+        item = [[OTVItem alloc] init];
+        item.isDirectory = YES;
+        item.url = [NSURL URLWithString:@"http://omarroms.homeip.net"];
+    }
+    
+    if (item.isDirectory == NO)
+        completionHandler(nil, [[NSError alloc] init]);
+    
+    [self.manager GET:[item.url absoluteString]
+      parameters:nil
+        progress:^(NSProgress * _Nonnull downloadProgress) {
+            printf(".");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.currentURL = item.url;
+        
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        
+        NSData *htmlData = (NSData *)responseObject;
+        
+        TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:htmlData];
+        NSArray<TFHppleElement *> *elements = [hpple searchWithXPathQuery:@"//div[@class='fileInfo']//a"];
+        
+        for (TFHppleElement *e in elements) {
+            OTVItem *newItem = [[OTVItem alloc] init];
+            
+            newItem.name = e.attributes[@"href"];
+            newItem.url = [item.url URLByAppendingPathComponent:e.attributes[@"href"]];
+            newItem.isDirectory = [newItem.name hasSuffix:@"/"];
+            
+            [items addObject:newItem];
+        }
+        
+        completionHandler(items, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completionHandler(nil, error);
+    }];
+}
 
 @end
