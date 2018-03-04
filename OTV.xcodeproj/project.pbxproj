@@ -13,6 +13,9 @@
 		4D446BCD204C1CB600C858E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D446BCB204C1CB600C858E3 /* Main.storyboard */; };
 		4D446BCF204C1CB600C858E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D446BCE204C1CB600C858E3 /* Assets.xcassets */; };
 		4D446BD2204C1CB600C858E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BD1204C1CB600C858E3 /* main.m */; };
+		4D446BD8204C229300C858E3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDB204C229300C858E3 /* AFNetworking.framework */; };
+		4D446BD9204C229300C858E3 /* hpple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDC204C229300C858E3 /* hpple.framework */; };
+		4D446BDA204C229300C858E3 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BDD204C229300C858E3 /* SVProgressHUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		4D446BCE204C1CB600C858E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D446BD0204C1CB600C858E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D446BD1204C1CB600C858E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D446BDB204C229300C858E3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D446BDC204C229300C858E3 /* hpple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = hpple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D446BDD204C229300C858E3 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
 		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D446BD8204C229300C858E3 /* AFNetworking.framework in Frameworks */,
+				4D446BD9204C229300C858E3 /* hpple.framework in Frameworks */,
+				4D446BDA204C229300C858E3 /* SVProgressHUD.framework in Frameworks */,
 				07393C374D723B17A6C46A87 /* Pods_OTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +96,9 @@
 		9197CF57304D6FC1C9ED44C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D446BDB204C229300C858E3 /* AFNetworking.framework */,
+				4D446BDC204C229300C858E3 /* hpple.framework */,
+				4D446BDD204C229300C858E3 /* SVProgressHUD.framework */,
 				F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */,
 			);
 			name = Frameworks;

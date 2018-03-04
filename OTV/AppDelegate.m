@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <hpple/TFHpple.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSData *htmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://omarroms.homeip.net/"]];
+    
+    TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:htmlData];
+    NSArray *elements = [hpple searchWithXPathQuery:@"//div[@class='fileInfo']//a"];
+    
+    NSLog(@"%@", elements);
+    
     return YES;
 }
 
