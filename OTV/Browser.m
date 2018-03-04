@@ -35,15 +35,6 @@
 
 - (void)browseToItem:(OTVItem *)item
 withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))completionHandler {
-    /*
-     NSData *htmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://omarroms.homeip.net/"]];
-     
-     TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:htmlData];
-     NSArray *elements = [hpple searchWithXPathQuery:@"//div[@class='fileInfo']//a"];
-     
-     NSLog(@"%@", elements);
-     */
-    
     if (!item) {
         item = [[OTVItem alloc] init];
         item.isDirectory = YES;
