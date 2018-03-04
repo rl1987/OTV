@@ -96,5 +96,4 @@
     vvc.videoURL = item.url;
 }
 
-
 @end

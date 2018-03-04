@@ -66,17 +66,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oq8-eg-rrI"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ozk-qg-oYb" appends="YES" id="dxF-6Y-bWG"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="videoView" destination="mB4-gH-tvI" id="1Fc-6L-DJK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uaf-Xl-jqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ozk-qg-oYb">
+                    <pressTypeMask key="allowedPressTypes" playPause="YES"/>
+                    <connections>
+                        <action selector="pauseTapped:" destination="mgl-9W-iDq" id="9TR-aT-REn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1438" y="-108"/>
+            <point key="canvasLocation" x="1602" y="-108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bEF-oY-H77">

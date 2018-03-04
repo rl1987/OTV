@@ -46,4 +46,14 @@
     [super viewWillDisappear:animated];
 }
 
+#pragma - IBActions
+
+- (IBAction)pauseTapped:(id)sender {
+    if (self.player.isPlaying) {
+        [self.player pause];
+    } else {
+        [self.player play];
+    }
+}
+
 @end
