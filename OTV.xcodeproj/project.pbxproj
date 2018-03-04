@@ -20,6 +20,12 @@
 		4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BE5204C35AD00C858E3 /* TableViewController.m */; };
 		4D446BE9204C3E3400C858E3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BE7204C3E3300C858E3 /* AVKit.framework */; };
 		4D446BEA204C3E3400C858E3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BE8204C3E3300C858E3 /* AVFoundation.framework */; };
+		4D446BED204C429F00C858E3 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BEC204C429F00C858E3 /* VideoViewController.m */; };
+		4D446BEF204C44D600C858E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BEE204C44D600C858E3 /* AudioToolbox.framework */; };
+		4D446BF1204C44DD00C858E3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF0204C44DD00C858E3 /* CoreMedia.framework */; };
+		4D446BF3204C44FD00C858E3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF2204C44FD00C858E3 /* VideoToolbox.framework */; };
+		4D446BF5204C46A200C858E3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF4204C46A200C858E3 /* libc++.tbd */; };
+		4D446BF7204C46AC00C858E3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF6204C46AC00C858E3 /* libiconv.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,13 @@
 		4D446BE5204C35AD00C858E3 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		4D446BE7204C3E3300C858E3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		4D446BE8204C3E3300C858E3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4D446BEB204C429F00C858E3 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		4D446BEC204C429F00C858E3 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		4D446BEE204C44D600C858E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4D446BF0204C44DD00C858E3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4D446BF2204C44FD00C858E3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		4D446BF4204C46A200C858E3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4D446BF6204C46AC00C858E3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
 		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D446BF7204C46AC00C858E3 /* libiconv.tbd in Frameworks */,
+				4D446BF5204C46A200C858E3 /* libc++.tbd in Frameworks */,
+				4D446BF3204C44FD00C858E3 /* VideoToolbox.framework in Frameworks */,
+				4D446BF1204C44DD00C858E3 /* CoreMedia.framework in Frameworks */,
+				4D446BEF204C44D600C858E3 /* AudioToolbox.framework in Frameworks */,
 				4D446BE9204C3E3400C858E3 /* AVKit.framework in Frameworks */,
 				4D446BEA204C3E3400C858E3 /* AVFoundation.framework in Frameworks */,
 				4D446BD8204C229300C858E3 /* AFNetworking.framework in Frameworks */,
@@ -105,6 +123,8 @@
 				4D446BE2204C345800C858E3 /* OTVItem.m */,
 				4D446BE4204C35AD00C858E3 /* TableViewController.h */,
 				4D446BE5204C35AD00C858E3 /* TableViewController.m */,
+				4D446BEB204C429F00C858E3 /* VideoViewController.h */,
+				4D446BEC204C429F00C858E3 /* VideoViewController.m */,
 			);
 			path = OTV;
 			sourceTree = "<group>";
@@ -112,6 +132,11 @@
 		9197CF57304D6FC1C9ED44C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D446BF6204C46AC00C858E3 /* libiconv.tbd */,
+				4D446BF4204C46A200C858E3 /* libc++.tbd */,
+				4D446BF2204C44FD00C858E3 /* VideoToolbox.framework */,
+				4D446BF0204C44DD00C858E3 /* CoreMedia.framework */,
+				4D446BEE204C44D600C858E3 /* AudioToolbox.framework */,
 				4D446BE8204C3E3300C858E3 /* AVFoundation.framework */,
 				4D446BE7204C3E3300C858E3 /* AVKit.framework */,
 				4D446BDB204C229300C858E3 /* AFNetworking.framework */,
@@ -255,6 +280,7 @@
 			files = (
 				4D446BE0204C287700C858E3 /* Browser.m in Sources */,
 				4D446BE3204C345800C858E3 /* OTVItem.m in Sources */,
+				4D446BED204C429F00C858E3 /* VideoViewController.m in Sources */,
 				4D446BD2204C1CB600C858E3 /* main.m in Sources */,
 				4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */,
 				4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */,

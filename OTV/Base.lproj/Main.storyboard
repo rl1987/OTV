@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,20 +43,40 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="vSA-jz-0Re"/>
                     <connections>
-                        <segue destination="LO7-Qs-2sA" kind="show" identifier="to_player" id="Uh3-vq-dgm"/>
+                        <segue destination="mgl-9W-iDq" kind="show" identifier="to_player" id="vSI-Sh-uEr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBf-TA-oAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-747" y="-108"/>
         </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="WTL-Ie-iLD">
+        <!--Video View Controller-->
+        <scene sceneID="vln-7X-a9f">
             <objects>
-                <avPlayerViewController storyboardIdentifier="player" videoGravity="AVLayerVideoGravityResizeAspect" id="LO7-Qs-2sA" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TL3-VJ-WDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="mgl-9W-iDq" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ntt-UU-RCz"/>
+                        <viewControllerLayoutGuide type="bottom" id="IJK-Tb-2s8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Yb-Ut-Kt5">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mB4-gH-tvI">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oq8-eg-rrI"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="mB4-gH-tvI" id="1Fc-6L-DJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uaf-Xl-jqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515" y="-108"/>
+            <point key="canvasLocation" x="1438" y="-108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bEF-oY-H77">

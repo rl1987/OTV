@@ -16,17 +16,20 @@ PODS:
     - AFNetworking/NSURLSession
   - hpple (0.2.0)
   - SVProgressHUD (2.2.5)
+  - TVVLCKit (3.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - hpple
   - SVProgressHUD
+  - TVVLCKit (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TVVLCKit: 50c5a2c0c9d59e426e577eabd8ee4f12c296b2ab
 
-PODFILE CHECKSUM: 2611ed63efdd7a3c06794ea562eb897cfe98f726
+PODFILE CHECKSUM: 0643518d3d8837b680ccc378ded110d73b0d8efd
 
 COCOAPODS: 1.4.0

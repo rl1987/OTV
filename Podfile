@@ -9,4 +9,5 @@ target 'OTV' do
   pod 'hpple'
   pod 'AFNetworking', '~> 3.0'
   pod 'SVProgressHUD'
+  pod 'TVVLCKit', '~> 3.0'
 end

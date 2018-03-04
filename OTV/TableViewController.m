@@ -8,12 +8,10 @@
 
 #import "TableViewController.h"
 
-#import <AVFoundation/AVFoundation.h>
-#import <AVKit/AVKit.h>
-
 #import <SVProgressHUD/SVProgressHUD.h>
 
 #import "Browser.h"
+#import "VideoViewController.h"
 
 @interface TableViewController ()
 
@@ -93,13 +91,9 @@
 {
     OTVItem *item = (OTVItem *)sender;
     
-    AVPlayerViewController *pvc = (AVPlayerViewController *)segue.destinationViewController;
+    VideoViewController *vvc = (VideoViewController *)segue.destinationViewController;
     
-    pvc.player = [AVPlayer playerWithURL:item.url];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [pvc.player play];
-    });
+    vvc.videoURL = item.url;
 }
 
 
