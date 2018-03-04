@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07393C374D723B17A6C46A87 /* Pods_OTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */; };
 		4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BC6204C1CB600C858E3 /* AppDelegate.m */; };
 		4D446BCA204C1CB600C858E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BC9204C1CB600C858E3 /* ViewController.m */; };
 		4D446BCD204C1CB600C858E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D446BCB204C1CB600C858E3 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		4D446BCE204C1CB600C858E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D446BD0204C1CB600C858E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D446BD1204C1CB600C858E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
+		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
+		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07393C374D723B17A6C46A87 /* Pods_OTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33FAAE8953E2CC2420FAC72A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */,
+				C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4D446BB9204C1CB600C858E3 = {
 			isa = PBXGroup;
 			children = (
 				4D446BC4204C1CB600C858E3 /* OTV */,
 				4D446BC3204C1CB600C858E3 /* Products */,
+				33FAAE8953E2CC2420FAC72A /* Pods */,
+				9197CF57304D6FC1C9ED44C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +84,14 @@
 			path = OTV;
 			sourceTree = "<group>";
 		};
+		9197CF57304D6FC1C9ED44C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -75,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D446BD5204C1CB600C858E3 /* Build configuration list for PBXNativeTarget "OTV" */;
 			buildPhases = (
+				71983662F960DA960C0B6405 /* [CP] Check Pods Manifest.lock */,
 				4D446BBE204C1CB600C858E3 /* Sources */,
 				4D446BBF204C1CB600C858E3 /* Frameworks */,
 				4D446BC0204C1CB600C858E3 /* Resources */,
+				C59DFBF264F777B6952CF58B /* [CP] Embed Pods Frameworks */,
+				DED6DB2C6ACEB4ED77002EE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71983662F960DA960C0B6405 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59DFBF264F777B6952CF58B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OTV/Pods-OTV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/hpple/hpple.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hpple.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTV/Pods-OTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DED6DB2C6ACEB4ED77002EE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTV/Pods-OTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D446BBE204C1CB600C858E3 /* Sources */ = {
@@ -262,6 +347,7 @@
 		};
 		4D446BD6204C1CB600C858E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -277,6 +363,7 @@
 		};
 		4D446BD7204C1CB600C858E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
