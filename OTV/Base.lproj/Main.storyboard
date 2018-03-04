@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9aa-hV-8mZ">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ruu-d4-Ii5">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -40,10 +40,40 @@
                             <outlet property="delegate" destination="9aa-hV-8mZ" id="Lut-z1-Med"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="vSA-jz-0Re"/>
+                    <connections>
+                        <segue destination="LO7-Qs-2sA" kind="show" identifier="to_player" id="Uh3-vq-dgm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBf-TA-oAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453" y="-133"/>
+            <point key="canvasLocation" x="-747" y="-108"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="WTL-Ie-iLD">
+            <objects>
+                <avPlayerViewController storyboardIdentifier="player" videoGravity="AVLayerVideoGravityResizeAspect" id="LO7-Qs-2sA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL3-VJ-WDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515" y="-108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bEF-oY-H77">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ruu-d4-Ii5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B3Z-LT-jRR">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9aa-hV-8mZ" kind="relationship" relationship="rootViewController" id="jzq-wc-5bR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RiO-OS-mbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3083" y="-108"/>
         </scene>
     </scenes>
 </document>

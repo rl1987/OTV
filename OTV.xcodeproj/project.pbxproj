@@ -18,6 +18,8 @@
 		4D446BE0204C287700C858E3 /* Browser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BDF204C287700C858E3 /* Browser.m */; };
 		4D446BE3204C345800C858E3 /* OTVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BE2204C345800C858E3 /* OTVItem.m */; };
 		4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BE5204C35AD00C858E3 /* TableViewController.m */; };
+		4D446BE9204C3E3400C858E3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BE7204C3E3300C858E3 /* AVKit.framework */; };
+		4D446BEA204C3E3400C858E3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BE8204C3E3300C858E3 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		4D446BE2204C345800C858E3 /* OTVItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTVItem.m; sourceTree = "<group>"; };
 		4D446BE4204C35AD00C858E3 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		4D446BE5204C35AD00C858E3 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		4D446BE7204C3E3300C858E3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		4D446BE8204C3E3300C858E3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
 		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D446BE9204C3E3400C858E3 /* AVKit.framework in Frameworks */,
+				4D446BEA204C3E3400C858E3 /* AVFoundation.framework in Frameworks */,
 				4D446BD8204C229300C858E3 /* AFNetworking.framework in Frameworks */,
 				4D446BD9204C229300C858E3 /* hpple.framework in Frameworks */,
 				4D446BDA204C229300C858E3 /* SVProgressHUD.framework in Frameworks */,
@@ -106,6 +112,8 @@
 		9197CF57304D6FC1C9ED44C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D446BE8204C3E3300C858E3 /* AVFoundation.framework */,
+				4D446BE7204C3E3300C858E3 /* AVKit.framework */,
 				4D446BDB204C229300C858E3 /* AFNetworking.framework */,
 				4D446BDC204C229300C858E3 /* hpple.framework */,
 				4D446BDD204C229300C858E3 /* SVProgressHUD.framework */,
