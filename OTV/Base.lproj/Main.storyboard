@@ -75,6 +75,7 @@
                             <outletCollection property="gestureRecognizers" destination="Ozk-qg-oYb" appends="YES" id="dxF-6Y-bWG"/>
                             <outletCollection property="gestureRecognizers" destination="LxH-IS-wlT" appends="YES" id="bDZ-Y9-ofJ"/>
                             <outletCollection property="gestureRecognizers" destination="O9Z-Su-C03" appends="YES" id="0ZE-Wy-C6t"/>
+                            <outletCollection property="gestureRecognizers" destination="8yV-KN-JUy" appends="YES" id="VDv-v1-lB1"/>
                         </connections>
                     </view>
                     <connections>
@@ -98,6 +99,12 @@
                         <action selector="swipeLeft:" destination="mgl-9W-iDq" id="hn0-Ix-e1R"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="8yV-KN-JUy">
+                    <pressTypeMask key="allowedPressTypes" menu="YES"/>
+                    <connections>
+                        <action selector="menuTapped:" destination="mgl-9W-iDq" id="QUu-M3-pey"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2268" y="-108"/>
         </scene>

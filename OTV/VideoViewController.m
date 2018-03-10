@@ -64,4 +64,8 @@
     [self.player shortJumpBackward];
 }
 
+- (IBAction)menuTapped:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end
