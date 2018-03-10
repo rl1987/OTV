@@ -12,6 +12,8 @@
 
 @interface ProgressViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIProgressView *progressView;
+
 @property (nonatomic, strong) OTVItem *item;
 
 @end

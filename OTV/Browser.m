@@ -105,4 +105,36 @@ withCompletionHandler:(void (^)(long long size, NSError *error))completionHandle
     }];
 }
 
+- (NSURLSessionDownloadTask *)downloadItem:(OTVItem *)item
+                          withProgress:(void (^)(double percentageDownloaded))progressBlock
+                  andCompletionHandler:(void (^)(NSURL *fileURL, NSError *error))completionHandler{
+    NSURLSessionDownloadTask *task =
+    [self.manager downloadTaskWithRequest:[NSURLRequest requestWithURL:item.url]
+                                 progress:^(NSProgress * _Nonnull downloadProgress) {
+                                     double percentage = (double)downloadProgress.completedUnitCount / downloadProgress.totalUnitCount;
+                                     
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         progressBlock(percentage);
+                                     });
+                                     
+                                 } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+                                     NSURL *cachesDirectoryURL =
+                                     [[NSFileManager defaultManager] URLForDirectory:NSCachesDirectory
+                                                                            inDomain:NSUserDomainMask
+                                                                   appropriateForURL:nil
+                                                                              create:YES
+                                                                               error:nil];
+                                     
+                                     return [cachesDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+                                 } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         completionHandler(filePath, error);
+                                     });
+                                 }];
+    
+    [task resume];
+    
+    return task;
+}
+
 @end

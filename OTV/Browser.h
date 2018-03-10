@@ -20,4 +20,8 @@ withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))comp
 - (void)getSizeOfItem:(OTVItem *)item
 withCompletionHandler:(void (^)(long long size, NSError *error))completionHandler;
 
+- (NSURLSessionDownloadTask *)downloadItem:(OTVItem *)item
+                          withProgress:(void (^)(double percentageDownloaded))progressBlock
+                  andCompletionHandler:(void (^)(NSURL *fileURL, NSError *error))completionHandler;
+
 @end

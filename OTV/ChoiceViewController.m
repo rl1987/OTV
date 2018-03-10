@@ -30,7 +30,7 @@
                               return;
                           }
                           
-                          NSString *sizeString = [NSString stringWithFormat:@"%lld", size];
+                          NSString *sizeString = [NSString stringWithFormat:@"Size: %lld B", size];
                           
                           UIAlertController *alertControler =
                           [UIAlertController alertControllerWithTitle:self.item.name
