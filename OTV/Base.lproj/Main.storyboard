@@ -43,7 +43,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="vSA-jz-0Re"/>
                     <connections>
-                        <segue destination="mgl-9W-iDq" kind="show" identifier="to_player" id="vSI-Sh-uEr"/>
+                        <segue destination="pMD-M3-qcq" kind="show" identifier="choice" id="C7x-Lw-Eza"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBf-TA-oAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,7 +99,63 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1602" y="-108"/>
+            <point key="canvasLocation" x="2268" y="-108"/>
+        </scene>
+        <!--Progress View Controller-->
+        <scene sceneID="IUJ-Ri-lJL">
+            <objects>
+                <viewController id="KrP-yI-I2u" customClass="ProgressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p5I-2h-Nf3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jbi-2n-QSs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yXb-Ht-jsW">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-Gg-gf6">
+                                <rect key="frame" x="110" y="535" width="1700" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Donwloading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-zT-Mzb">
+                                <rect key="frame" x="832" y="145" width="256" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MNf-IH-2xn"/>
+                    </view>
+                    <connections>
+                        <segue destination="mgl-9W-iDq" kind="show" identifier="show_file" id="INp-HL-c9m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEV-KC-UEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="1784"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="u5p-el-p7i">
+            <objects>
+                <viewController id="pMD-M3-qcq" customClass="ChoiceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RjU-Z0-Eco"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpA-sS-CT1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nfF-zM-MPS">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ndv-Q2-gTW"/>
+                    </view>
+                    <connections>
+                        <segue destination="mgl-9W-iDq" kind="show" identifier="stream" id="krj-0V-hf6"/>
+                        <segue destination="KrP-yI-I2u" kind="show" identifier="download" id="pjx-Sf-c5r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rd2-rs-yBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747" y="1784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bEF-oY-H77">
@@ -117,7 +173,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiO-OS-mbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3083" y="-108"/>
+            <point key="canvasLocation" x="-3396" y="-108"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="INp-HL-c9m"/>
+    </inferredMetricsTieBreakers>
 </document>

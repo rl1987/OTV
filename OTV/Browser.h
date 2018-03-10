@@ -12,7 +12,12 @@
 
 @interface Browser : NSObject
 
++ (instancetype)sharedInstance;
+
 - (void)browseToItem:(OTVItem *)item
 withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))completionHandler;
+
+- (void)getSizeOfItem:(OTVItem *)item
+withCompletionHandler:(void (^)(long long size, NSError *error))completionHandler;
 
 @end

@@ -21,6 +21,18 @@
 
 @implementation Browser
 
++ (instancetype)sharedInstance
+{
+    static Browser *_sharedInstance = NULL;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc] init];
+    });
+    
+    return _sharedInstance;
+}
+
 - (instancetype)init {
     self = [super init];
     
@@ -80,6 +92,16 @@ withCompletionHandler:(void (^)(NSArray <OTVItem *> *items, NSError *error))comp
         completionHandler(items, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         completionHandler(nil, error);
+    }];
+}
+
+- (void)getSizeOfItem:(OTVItem *)item
+withCompletionHandler:(void (^)(long long size, NSError *error))completionHandler {
+    [self.manager HEAD:[item.url absoluteString] parameters:nil
+               success:^(NSURLSessionDataTask * _Nonnull task) {
+                   completionHandler(task.response.expectedContentLength, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completionHandler(0, error);
     }];
 }
 

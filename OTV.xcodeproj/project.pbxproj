@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07393C374D723B17A6C46A87 /* Pods_OTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */; };
+		4D3A74672054564C00F743A7 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A74662054564C00F743A7 /* ChoiceViewController.m */; };
+		4D3A746A2054565800F743A7 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A74692054565800F743A7 /* ProgressViewController.m */; };
 		4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BC6204C1CB600C858E3 /* AppDelegate.m */; };
 		4D446BCD204C1CB600C858E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D446BCB204C1CB600C858E3 /* Main.storyboard */; };
 		4D446BCF204C1CB600C858E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D446BCE204C1CB600C858E3 /* Assets.xcassets */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D3A74652054564C00F743A7 /* ChoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
+		4D3A74662054564C00F743A7 /* ChoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
+		4D3A74682054565800F743A7 /* ProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		4D3A74692054565800F743A7 /* ProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		4D446BC2204C1CB600C858E3 /* OTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D446BC5204C1CB600C858E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D446BC6204C1CB600C858E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +131,10 @@
 				4D446BE5204C35AD00C858E3 /* TableViewController.m */,
 				4D446BEB204C429F00C858E3 /* VideoViewController.h */,
 				4D446BEC204C429F00C858E3 /* VideoViewController.m */,
+				4D3A74652054564C00F743A7 /* ChoiceViewController.h */,
+				4D3A74662054564C00F743A7 /* ChoiceViewController.m */,
+				4D3A74682054565800F743A7 /* ProgressViewController.h */,
+				4D3A74692054565800F743A7 /* ProgressViewController.m */,
 			);
 			path = OTV;
 			sourceTree = "<group>";
@@ -283,7 +293,9 @@
 				4D446BED204C429F00C858E3 /* VideoViewController.m in Sources */,
 				4D446BD2204C1CB600C858E3 /* main.m in Sources */,
 				4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */,
+				4D3A74672054564C00F743A7 /* ChoiceViewController.m in Sources */,
 				4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */,
+				4D3A746A2054565800F743A7 /* ProgressViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

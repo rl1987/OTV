@@ -11,7 +11,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 
 #import "Browser.h"
-#import "VideoViewController.h"
+#import "ChoiceViewController.h"
 
 @interface TableViewController ()
 
@@ -81,7 +81,7 @@
     if (item.isDirectory) {
         [self browseItem:item];
     } else {
-        [self performSegueWithIdentifier:@"to_player" sender:item];
+        [self performSegueWithIdentifier:@"choice" sender:item];
     }
 }
 
@@ -91,9 +91,9 @@
 {
     OTVItem *item = (OTVItem *)sender;
     
-    VideoViewController *vvc = (VideoViewController *)segue.destinationViewController;
+    ChoiceViewController *cvc = (ChoiceViewController *)segue.destinationViewController;
     
-    vvc.videoURL = item.url;
+    cvc.item = item;
 }
 
 @end
