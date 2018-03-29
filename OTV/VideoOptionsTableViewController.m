@@ -79,7 +79,10 @@
             break;
         case 1:
             cell.textLabel.text = self.player.videoSubTitlesNames[indexPath.row];
-            cell.accessoryType = self.player.currentVideoSubTitleIndex == indexPath.row ?
+            
+            NSUInteger subIndex = [self.player.videoSubTitlesIndexes[indexPath.row] intValue];
+            
+            cell.accessoryType = subIndex == self.player.currentVideoSubTitleIndex ?
             UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
             break;
         default:
@@ -98,10 +101,11 @@
         }
     }
     
-    // TODO: subtitle selection not working properly - fix this.
     if (indexPath.section == 1) {
-        if (indexPath.row != self.player.currentVideoSubTitleIndex) {
-            self.player.currentVideoSubTitleIndex = (int)indexPath.row;
+        int subIndex = [self.player.videoSubTitlesIndexes[indexPath.row] intValue];
+        
+        if (subIndex != self.player.currentVideoSubTitleIndex) {
+            self.player.currentVideoSubTitleIndex = (int)subIndex;
             [self.tableView reloadData];
         }
     }
