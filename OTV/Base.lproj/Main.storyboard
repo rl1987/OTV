@@ -76,10 +76,17 @@
                             <outletCollection property="gestureRecognizers" destination="LxH-IS-wlT" appends="YES" id="bDZ-Y9-ofJ"/>
                             <outletCollection property="gestureRecognizers" destination="O9Z-Su-C03" appends="YES" id="0ZE-Wy-C6t"/>
                             <outletCollection property="gestureRecognizers" destination="8yV-KN-JUy" appends="YES" id="VDv-v1-lB1"/>
+                            <outletCollection property="gestureRecognizers" destination="sOx-eo-Ica" appends="YES" id="PH5-WF-UYL"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="videoView" destination="mB4-gH-tvI" id="1Fc-6L-DJK"/>
+                        <segue destination="ROg-tg-qI6" kind="popoverPresentation" identifier="video_opts" popoverAnchorView="mB4-gH-tvI" id="OqL-cg-b35">
+                            <popoverArrowDirection key="popoverArrowDirection"/>
+                            <popoverPassthroughViews>
+                                <view reference="mB4-gH-tvI"/>
+                            </popoverPassthroughViews>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uaf-Xl-jqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,8 +112,42 @@
                         <action selector="menuTapped:" destination="mgl-9W-iDq" id="QUu-M3-pey"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="sOx-eo-Ica">
+                    <connections>
+                        <action selector="swipeDown:" destination="mgl-9W-iDq" id="byu-nI-RTj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2268" y="-108"/>
+        </scene>
+        <!--Video Options Table View Controller-->
+        <scene sceneID="9Ew-P4-5M4">
+            <objects>
+                <tableViewController id="ROg-tg-qI6" customClass="VideoOptionsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="ov4-8q-J0t">
+                        <rect key="frame" x="0.0" y="0.0" width="1707" height="907"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_id" id="vZn-bs-g4J">
+                                <rect key="frame" x="0.0" y="66" width="1667" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vZn-bs-g4J" id="paN-VS-bAH">
+                                    <rect key="frame" x="0.0" y="0.0" width="1667" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ROg-tg-qI6" id="QO9-bS-Qgk"/>
+                            <outlet property="delegate" destination="ROg-tg-qI6" id="Z1G-bh-EGE"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="1707" height="907"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60P-9S-uNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4973" y="-106"/>
         </scene>
         <!--Progress View Controller-->
         <scene sceneID="IUJ-Ri-lJL">
@@ -141,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEV-KC-UEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2268" y="1784"/>
+            <point key="canvasLocation" x="2268" y="2361"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="u5p-el-p7i">
@@ -163,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rd2-rs-yBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-747" y="1784"/>
+            <point key="canvasLocation" x="-747" y="2361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bEF-oY-H77">
@@ -181,7 +222,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiO-OS-mbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3396" y="-108"/>
+            <point key="canvasLocation" x="-3799" y="-108"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

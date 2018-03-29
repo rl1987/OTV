@@ -10,6 +10,8 @@
 
 #import <TVVLCKit/TVVLCKit.h>
 
+#import "VideoOptionsTableViewController.h"
+
 @interface VideoViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *videoView;
@@ -63,9 +65,22 @@
 - (IBAction)swipeLeft:(id)sender {
     [self.player shortJumpBackward];
 }
+- (IBAction)swipeDown:(id)sender {
+    [self performSegueWithIdentifier:@"video_opts" sender:nil];
+}
 
 - (IBAction)menuTapped:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"video_opts"]) {
+        
+        VideoOptionsTableViewController *votvc =
+        (VideoOptionsTableViewController *)segue.destinationViewController;
+        
+        votvc.player = self.player;
+    }
 }
 
 @end

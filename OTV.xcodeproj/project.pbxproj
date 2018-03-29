@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07393C374D723B17A6C46A87 /* Pods_OTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */; };
+		4D0A76A9206D3440005F30A2 /* VideoOptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A76A8206D3440005F30A2 /* VideoOptionsTableViewController.m */; };
 		4D3A74672054564C00F743A7 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A74662054564C00F743A7 /* ChoiceViewController.m */; };
 		4D3A746A2054565800F743A7 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A74692054565800F743A7 /* ProgressViewController.m */; };
 		4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D446BC6204C1CB600C858E3 /* AppDelegate.m */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0A76A7206D3440005F30A2 /* VideoOptionsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoOptionsTableViewController.h; sourceTree = "<group>"; };
+		4D0A76A8206D3440005F30A2 /* VideoOptionsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoOptionsTableViewController.m; sourceTree = "<group>"; };
 		4D3A74652054564C00F743A7 /* ChoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		4D3A74662054564C00F743A7 /* ChoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
 		4D3A74682054565800F743A7 /* ProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				4D3A74662054564C00F743A7 /* ChoiceViewController.m */,
 				4D3A74682054565800F743A7 /* ProgressViewController.h */,
 				4D3A74692054565800F743A7 /* ProgressViewController.m */,
+				4D0A76A7206D3440005F30A2 /* VideoOptionsTableViewController.h */,
+				4D0A76A8206D3440005F30A2 /* VideoOptionsTableViewController.m */,
 			);
 			path = OTV;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				4D446BD2204C1CB600C858E3 /* main.m in Sources */,
 				4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */,
 				4D3A74672054564C00F743A7 /* ChoiceViewController.m in Sources */,
+				4D0A76A9206D3440005F30A2 /* VideoOptionsTableViewController.m in Sources */,
 				4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */,
 				4D3A746A2054565800F743A7 /* ProgressViewController.m in Sources */,
 			);
