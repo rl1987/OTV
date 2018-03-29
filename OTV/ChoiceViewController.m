@@ -54,13 +54,14 @@
                           [alertControler addAction:downloadAction];
                           
                           UIAlertAction *cancelAction =
-                          [UIAlertAction actionWithTitle:@"Cancel"
+                          [UIAlertAction actionWithTitle:nil
                                                    style:UIAlertActionStyleCancel
                                                  handler:^(UIAlertAction * _Nonnull action) {
                                                      [self.navigationController popViewControllerAnimated:YES];
-                          }];
-                          [alertControler addAction:cancelAction];
+                                                 }];
                           
+                          [alertControler addAction:cancelAction];
+
                           [self presentViewController:alertControler
                                              animated:YES
                                            completion:NULL];
