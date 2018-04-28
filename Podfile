@@ -10,4 +10,5 @@ target 'OTV' do
   pod 'AFNetworking', '~> 3.0'
   pod 'SVProgressHUD'
   pod 'TVVLCKit', '~> 3.0'
+  pod 'FormatterKit'
 end

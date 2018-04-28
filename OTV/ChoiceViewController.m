@@ -13,6 +13,7 @@
 #import "ProgressViewController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <FormatterKit/TTTUnitOfInformationFormatter.h>
 
 @interface ChoiceViewController ()
 
@@ -23,6 +24,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    TTTUnitOfInformationFormatter *formatter = [[TTTUnitOfInformationFormatter alloc] init];
+    
     [[Browser sharedInstance] getSizeOfItem:self.item
                       withCompletionHandler:^(long long size, NSError *error) {
                           if (error) {
@@ -30,7 +33,8 @@
                               return;
                           }
                           
-                          NSString *sizeString = [NSString stringWithFormat:@"Size: %lld B", size];
+                          NSString *sizeString =
+                          [formatter stringFromNumber:@(size) ofUnit:TTTByte];
                           
                           UIAlertController *alertControler =
                           [UIAlertController alertControllerWithTitle:self.item.name
