@@ -30,6 +30,8 @@
 		4D446BF3204C44FD00C858E3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF2204C44FD00C858E3 /* VideoToolbox.framework */; };
 		4D446BF5204C46A200C858E3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF4204C46A200C858E3 /* libc++.tbd */; };
 		4D446BF7204C46AC00C858E3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D446BF6204C46AC00C858E3 /* libiconv.tbd */; };
+		4DCEF0D920C6E55E009FD1B9 /* Pods-OTV-acknowledgements.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 4DCEF0D820C6E55E009FD1B9 /* Pods-OTV-acknowledgements.markdown */; };
+		4DCEF0DC20C6E5BB009FD1B9 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF0DB20C6E5BB009FD1B9 /* AcknowledgementsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,9 @@
 		4D446BF2204C44FD00C858E3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		4D446BF4204C46A200C858E3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		4D446BF6204C46AC00C858E3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		4DCEF0D820C6E55E009FD1B9 /* Pods-OTV-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "Pods-OTV-acknowledgements.markdown"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV-acknowledgements.markdown"; sourceTree = SOURCE_ROOT; };
+		4DCEF0DA20C6E5BB009FD1B9 /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
+		4DCEF0DB20C6E5BB009FD1B9 /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
 		BDBC0509E4897DF3B0FC5D82 /* Pods-OTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C622312FC5F81DFC8F425C99 /* Pods-OTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTV/Pods-OTV.release.xcconfig"; sourceTree = "<group>"; };
 		F3FEF5197F315EBF76C343F7 /* Pods_OTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +110,7 @@
 		4D446BB9204C1CB600C858E3 = {
 			isa = PBXGroup;
 			children = (
+				4DCEF0D720C6E4F2009FD1B9 /* Resources */,
 				4D446BC4204C1CB600C858E3 /* OTV */,
 				4D446BC3204C1CB600C858E3 /* Products */,
 				33FAAE8953E2CC2420FAC72A /* Pods */,
@@ -143,8 +149,18 @@
 				4D3A74692054565800F743A7 /* ProgressViewController.m */,
 				4D0A76A7206D3440005F30A2 /* VideoOptionsTableViewController.h */,
 				4D0A76A8206D3440005F30A2 /* VideoOptionsTableViewController.m */,
+				4DCEF0DA20C6E5BB009FD1B9 /* AcknowledgementsViewController.h */,
+				4DCEF0DB20C6E5BB009FD1B9 /* AcknowledgementsViewController.m */,
 			);
 			path = OTV;
+			sourceTree = "<group>";
+		};
+		4DCEF0D720C6E4F2009FD1B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DCEF0D820C6E55E009FD1B9 /* Pods-OTV-acknowledgements.markdown */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9197CF57304D6FC1C9ED44C9 /* Frameworks */ = {
@@ -228,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D446BCF204C1CB600C858E3 /* Assets.xcassets in Resources */,
+				4DCEF0D920C6E55E009FD1B9 /* Pods-OTV-acknowledgements.markdown in Resources */,
 				4D446BCD204C1CB600C858E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +322,7 @@
 				4D446BD2204C1CB600C858E3 /* main.m in Sources */,
 				4D446BE6204C35AD00C858E3 /* TableViewController.m in Sources */,
 				4D3A74672054564C00F743A7 /* ChoiceViewController.m in Sources */,
+				4DCEF0DC20C6E5BB009FD1B9 /* AcknowledgementsViewController.m in Sources */,
 				4D0A76A9206D3440005F30A2 /* VideoOptionsTableViewController.m in Sources */,
 				4D446BC7204C1CB600C858E3 /* AppDelegate.m in Sources */,
 				4D3A746A2054565800F743A7 /* ProgressViewController.m in Sources */,

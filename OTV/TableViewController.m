@@ -89,11 +89,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    OTVItem *item = (OTVItem *)sender;
+    if ([segue.identifier isEqualToString:@"choice"]) {
+        OTVItem *item = (OTVItem *)sender;
     
-    ChoiceViewController *cvc = (ChoiceViewController *)segue.destinationViewController;
+        ChoiceViewController *cvc = (ChoiceViewController *)segue.destinationViewController;
     
-    cvc.item = item;
+        cvc.item = item;
+    }
 }
 
 @end
