@@ -46,22 +46,30 @@ PODS:
     - FormatterKit/Resources
   - hpple (0.2.0)
   - SVProgressHUD (2.2.5)
-  - TVVLCKit (3.0.2)
+  - TVVLCKit (3.1.4)
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
   - FormatterKit (= 1.8.2)
   - hpple (= 0.2.0)
   - SVProgressHUD (= 2.2.5)
-  - TVVLCKit (= 3.0.2)
+  - TVVLCKit (= 3.1.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FormatterKit
+    - hpple
+    - SVProgressHUD
+    - TVVLCKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FormatterKit: 4b8f29acc9b872d5d12a63efb560661e8f2e1b98
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  TVVLCKit: 178e4f82f8b57320774821384e42eaac403d2faa
+  TVVLCKit: 3b2793e92a67e9c143afb0f2bba40f388f8af4c0
 
-PODFILE CHECKSUM: 0782071971255635590b500d69bf0106f37fdb4f
+PODFILE CHECKSUM: 3b653d47241ae33d645e17c67afb3605c67e85ee
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

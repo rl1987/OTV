@@ -9,6 +9,6 @@ target 'OTV' do
   pod 'hpple', '0.2.0'
   pod 'AFNetworking', '3.2.1'
   pod 'SVProgressHUD', '2.2.5'
-  pod 'TVVLCKit', '3.0.2'
+  pod 'TVVLCKit', '3.1.4'
   pod 'FormatterKit', '1.8.2'
 end

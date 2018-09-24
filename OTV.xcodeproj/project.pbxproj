@@ -194,7 +194,6 @@
 				4D446BBF204C1CB600C858E3 /* Frameworks */,
 				4D446BC0204C1CB600C858E3 /* Resources */,
 				C59DFBF264F777B6952CF58B /* [CP] Embed Pods Frameworks */,
-				DED6DB2C6ACEB4ED77002EE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,21 +291,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTV/Pods-OTV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DED6DB2C6ACEB4ED77002EE4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTV/Pods-OTV-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
